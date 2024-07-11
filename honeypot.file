@@ -1,5 +1,8 @@
 # Honeyport
-A honeypot project is like setting a trap to catch cyber attackers. It involves creating a system or network with vulnerabilities that look real to attract hackers. By luring attackers into the honeypot, cybersecurity professionals can observe their tactics, techniques, and motives without risking their actual systems. 
+A honeypot project is like setting a trap to catch cyber attackers. 
+It involves creating a system or network with vulnerabilities that look real to attract hackers. 
+By luring attackers into the honeypot, 
+cybersecurity professionals can observe their tactics, techniques, and motives without risking their actual systems. 
 
 I performed this project in python so i am uploading source code and how to set up it step by step guidance are there.
 
@@ -33,7 +36,26 @@ if __name__ == "__main__":
 
     //code over
 
-    How to set up
+    How to set up in python
+1.create directory of honeypot
+mkdir honeypot
+cd honeypot
+
+2.create script
+touch honeypot.py
+
+3.Paste My code in Python
+
+4.run the code which name honeypot.py
+
+5.Open windows terminal and type telnet local host 9000
+
+6.Run the port sudo python3 honeypot.py
+
+7.And now your honeypot Running in Backroud activities. 
+nohup python3 honeypot.py &
+
+
 
     
  
