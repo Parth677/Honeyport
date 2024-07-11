@@ -1,0 +1,39 @@
+# Honeyport
+A honeypot project is like setting a trap to catch cyber attackers. It involves creating a system or network with vulnerabilities that look real to attract hackers. By luring attackers into the honeypot, cybersecurity professionals can observe their tactics, techniques, and motives without risking their actual systems. 
+
+I performed this project in python so i am uploading source code and how to set up it step by step guidance are there.
+
+import socket
+import logging
+
+# Setup logging
+logging.basicConfig(filename='honeypot.log', level=logging.INFO, format='%(asctime)s %(message)s')
+
+def start_honeypot(host, port):
+    # Create a socket object
+    server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    # Bind the socket to the host and port
+    server_socket.bind((host, port))
+    # Listen for incoming connections
+    server_socket.listen(5)
+    logging.info(f"Honeypot listening on {host}:{port}")
+
+    while True:
+        # Accept an incoming connection
+        client_socket, client_address = server_socket.accept()
+        logging.info(f"Connection from {client_address[0]}:{client_address[1]}")
+        # Close the connection
+        client_socket.close()
+
+if __name__ == "__main__":
+    HOST = '0.0.0.0'  # Listen on all available interfaces
+    PORT = 9999       # Port to listen on
+
+    start_honeypot(HOST, PORT)
+
+    //code over
+
+    How to set up
+
+    
+ 
